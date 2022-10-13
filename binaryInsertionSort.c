@@ -22,11 +22,12 @@ void binaryInsertionSort(int arr[], int n)
 
     for (int i = 1; i < n; i++)
     {
+        int j = i - 1;
         key = arr[i];
 
-        loc = binarySearch(arr, key, 0, i);
+        loc = binarySearch(arr, key, 0, j);
 
-        for (int j = i - 1; j >= loc; j--)
+        for (; j >= loc; j--)
             arr[j + 1] = arr[j];
         arr[loc] = key;
     }
@@ -41,7 +42,8 @@ void printArr(int arr[], int n)
 
 int main()
 {
-    int arr[] = {37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54};
+    // int arr[] = {37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54};
+    int arr[] = {8, 6, 1, 5, 3};
     int n = sizeof(arr) / sizeof(arr[0]);
     binaryInsertionSort(arr, n);
     printArr(arr, n);
