@@ -42,8 +42,7 @@ void printArr(int arr[], int n)
 
 int main()
 {
-    // int arr[] = {37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54};
-    int arr[] = {8, 6, 1, 5, 3};
+    int arr[] = {37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54};
     int n = sizeof(arr) / sizeof(arr[0]);
     binaryInsertionSort(arr, n);
     printArr(arr, n);
